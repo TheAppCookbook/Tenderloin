@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ACBInfoPanelViewController" customModule="ACBInfoPanel" customModuleProvider="target">
+            <connections>
+                <outlet property="contentLabel" destination="0Gz-fA-HZP" id="nbI-p1-Eku"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="693"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Sfe-zk-1a6">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
+                    <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="97f-Bm-e2g"/>
+                    </constraints>
+                </imageView>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Xoj-PN-LME">
+                    <rect key="frame" x="0.0" y="100" width="600" height="593"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="250" image="Avatars" translatesAutoresizingMaskIntoConstraints="NO" id="Ada-Wi-yLx">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+                            <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="200" id="sx6-Si-JBI"/>
+                            </constraints>
+                        </imageView>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XFZ-0h-AKo">
+                            <rect key="frame" x="0.0" y="218" width="600" height="375"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Gz-fA-HZP">
+                            <rect key="frame" x="50" y="260" width="500" height="168"/>
+                            <string key="text">This app is part of the App Cookbook project.
+
+
+Each weekday, for 2 weeks Alec Davis and Patrick Perini designed, implemented, and documented one fully-baked app based on the day's Ingredient.
+
+
+This app's Ingredient was “$INGREDIENT.”</string>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Twitter" translatesAutoresizingMaskIntoConstraints="NO" id="oek-T1-ld5">
+                            <rect key="frame" x="0.0" y="468" width="600" height="125"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="oek-T1-ld5" secondAttribute="height" multiplier="24:5" id="g10-Y1-BYx"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dj6-h5-8YL">
+                            <rect key="frame" x="0.0" y="468" width="600" height="125"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="125" id="5ct-nQ-zal"/>
+                            </constraints>
+                            <state key="normal">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="twitterFooterWasPressed:" destination="-1" eventType="touchUpInside" id="8Yi-BZ-xov"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTG-El-6qm">
+                            <rect key="frame" x="153" y="29" width="140" height="140"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="140" id="aPg-VS-oiJ"/>
+                                <constraint firstAttribute="height" constant="140" id="nVJ-Gx-tGz"/>
+                            </constraints>
+                            <state key="normal">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="avatarWasPressed:" destination="-1" eventType="touchUpInside" id="GgD-2y-Ory"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lP8-xb-vu8">
+                            <rect key="frame" x="301" y="16" width="140" height="140"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="140" id="AIo-zA-ekn"/>
+                                <constraint firstAttribute="height" constant="140" id="wb9-tm-d43"/>
+                            </constraints>
+                            <state key="normal">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="avatarWasPressed:" destination="-1" eventType="touchUpInside" id="Cho-zD-ocb"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="oek-T1-ld5" secondAttribute="trailing" id="19a-yj-or9"/>
+                        <constraint firstItem="Ada-Wi-yLx" firstAttribute="top" secondItem="Xoj-PN-LME" secondAttribute="top" id="2eh-AX-opU"/>
+                        <constraint firstAttribute="bottom" secondItem="oek-T1-ld5" secondAttribute="bottom" id="3Zo-q7-PZw"/>
+                        <constraint firstItem="0Gz-fA-HZP" firstAttribute="leading" secondItem="Xoj-PN-LME" secondAttribute="leading" constant="50" id="5zr-Pg-3yK"/>
+                        <constraint firstItem="dj6-h5-8YL" firstAttribute="leading" secondItem="Xoj-PN-LME" secondAttribute="leading" id="8Yr-Ib-pCX"/>
+                        <constraint firstAttribute="centerX" secondItem="Ada-Wi-yLx" secondAttribute="centerX" id="DGV-iV-50v"/>
+                        <constraint firstItem="lP8-xb-vu8" firstAttribute="top" secondItem="Ada-Wi-yLx" secondAttribute="top" constant="16" id="H8M-84-mNk"/>
+                        <constraint firstAttribute="trailing" secondItem="Ada-Wi-yLx" secondAttribute="trailing" id="IOM-mi-YjP"/>
+                        <constraint firstItem="xTG-El-6qm" firstAttribute="top" secondItem="Ada-Wi-yLx" secondAttribute="top" constant="29" id="JxF-Zo-gGs"/>
+                        <constraint firstItem="Ada-Wi-yLx" firstAttribute="leading" secondItem="Xoj-PN-LME" secondAttribute="leading" id="QN8-tF-7HV"/>
+                        <constraint firstItem="xTG-El-6qm" firstAttribute="centerX" secondItem="Ada-Wi-yLx" secondAttribute="centerX" constant="-77" id="ROS-3a-z3K"/>
+                        <constraint firstAttribute="bottom" secondItem="dj6-h5-8YL" secondAttribute="bottom" id="UXX-EW-hVx"/>
+                        <constraint firstItem="oek-T1-ld5" firstAttribute="top" secondItem="0Gz-fA-HZP" secondAttribute="bottom" constant="40" id="bOl-pe-ybt"/>
+                        <constraint firstAttribute="trailing" secondItem="dj6-h5-8YL" secondAttribute="trailing" id="bbE-rr-b89"/>
+                        <constraint firstItem="0Gz-fA-HZP" firstAttribute="top" secondItem="Ada-Wi-yLx" secondAttribute="bottom" constant="60" id="bsO-2h-AxF"/>
+                        <constraint firstItem="oek-T1-ld5" firstAttribute="leading" secondItem="Xoj-PN-LME" secondAttribute="leading" id="dtO-uP-zql"/>
+                        <constraint firstItem="lP8-xb-vu8" firstAttribute="centerX" secondItem="Ada-Wi-yLx" secondAttribute="centerX" constant="71" id="ogc-xF-VKh"/>
+                        <constraint firstAttribute="trailing" secondItem="0Gz-fA-HZP" secondAttribute="trailing" constant="50" id="xXD-0O-7bO"/>
+                    </constraints>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8N-XI-IW6">
+                    <rect key="frame" x="0.0" y="8" width="600" height="92"/>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="headerWasPressed:" destination="-1" eventType="touchUpInside" id="QDh-nN-VAz"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="Xoj-PN-LME" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4M8-fA-TJX"/>
+                <constraint firstAttribute="trailing" secondItem="Xoj-PN-LME" secondAttribute="trailing" id="7oe-JM-Fr5"/>
+                <constraint firstItem="Sfe-zk-1a6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="JEE-am-rTd"/>
+                <constraint firstItem="Sfe-zk-1a6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="MhL-w1-eq0"/>
+                <constraint firstItem="Xoj-PN-LME" firstAttribute="top" secondItem="Z8N-XI-IW6" secondAttribute="bottom" id="SDJ-GZ-y1E"/>
+                <constraint firstItem="Z8N-XI-IW6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Tps-d9-uDH"/>
+                <constraint firstItem="Xoj-PN-LME" firstAttribute="top" secondItem="Sfe-zk-1a6" secondAttribute="bottom" id="XEK-An-Iaa"/>
+                <constraint firstItem="Z8N-XI-IW6" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="Zhc-CX-faw"/>
+                <constraint firstAttribute="trailing" secondItem="Sfe-zk-1a6" secondAttribute="trailing" id="dML-vT-usm"/>
+                <constraint firstAttribute="trailing" secondItem="Z8N-XI-IW6" secondAttribute="trailing" id="fOD-2M-b2k"/>
+                <constraint firstAttribute="bottom" secondItem="Xoj-PN-LME" secondAttribute="bottom" id="lAi-9Y-eA1"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="F8M-mC-kHw" appends="YES" id="LG3-OX-xEN"/>
+            </connections>
+            <point key="canvasLocation" x="340" y="398.5"/>
+        </view>
+        <swipeGestureRecognizer direction="down" id="F8M-mC-kHw">
+            <connections>
+                <action selector="swipeDownGestureWasRecognized:" destination="-1" id="aSS-dd-oSg"/>
+            </connections>
+        </swipeGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="Avatars" width="1856" height="1076"/>
+        <image name="Logo" width="1696" height="640"/>
+        <image name="Twitter" width="1696" height="356"/>
+    </resources>
+</document>

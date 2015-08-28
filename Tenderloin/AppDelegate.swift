@@ -13,7 +13,7 @@ import CoreLocation
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: Class Properties
-    var sharedAppDelegate: AppDelegate? { return UIApplication.sharedApplication().delegate as? AppDelegate }
+    static var sharedAppDelegate: AppDelegate? { return UIApplication.sharedApplication().delegate as? AppDelegate }
     
     // MARK: Properties
     var window: UIWindow?

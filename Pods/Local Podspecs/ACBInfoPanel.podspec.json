@@ -1,0 +1,27 @@
+{
+  "name": "ACBInfoPanel",
+  "version": "0.0.1",
+  "license": {
+    "type": "MIT"
+  },
+  "homepage": "https://github.com/TheAppCookbook/templates",
+  "authors": {
+    "The App Cookbook": "the@appcookbook.in"
+  },
+  "summary": "Our about page, across all apps.",
+  "source": {
+    "git": "https://github.com/TheAppCookbook/templates.git",
+    "branch": "master"
+  },
+  "source_files": [
+    "templates/ACBInfoPanel/ACBInfoPanelViewController.swift",
+    "templates/ACBInfoPanel/NSURL+ACBUrls.swift"
+  ],
+  "resources": [
+    "templates/ACBInfoPanel/ACBInfoPanelResources.xcassets",
+    "templates/ACBInfoPanel/ACBInfoPanelViewController.xib"
+  ],
+  "platforms": {
+    "ios": "8.0"
+  }
+}

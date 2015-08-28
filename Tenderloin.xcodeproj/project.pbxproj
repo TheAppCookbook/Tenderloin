@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		6C7A9B4F2D72A0B2ADF8BF4E /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 006FBD1723DBC73B60A5E5BF /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		739BCB531B8F95CE00AFED00 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739BCB521B8F95CE00AFED00 /* AppDelegate.swift */; };
-		739BCB551B8F95CE00AFED00 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739BCB541B8F95CE00AFED00 /* ViewController.swift */; };
+		739BCB551B8F95CE00AFED00 /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739BCB541B8F95CE00AFED00 /* EventListViewController.swift */; };
 		739BCB581B8F95CE00AFED00 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 739BCB561B8F95CE00AFED00 /* Main.storyboard */; };
 		739BCB5A1B8F95CE00AFED00 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 739BCB591B8F95CE00AFED00 /* Images.xcassets */; };
 		739BCB5D1B8F95CE00AFED00 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 739BCB5B1B8F95CE00AFED00 /* LaunchScreen.xib */; };
@@ -17,6 +17,11 @@
 		739BCB731B8F966700AFED00 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739BCB721B8F966700AFED00 /* Event.swift */; };
 		739BCB761B8FA28000AFED00 /* SeatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739BCB751B8FA28000AFED00 /* SeatingView.swift */; };
 		739BCB791B8FA46300AFED00 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739BCB781B8FA46300AFED00 /* RoundView.swift */; };
+		73D784E51B8FF7E6005E6E0E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D784E41B8FF7E6005E6E0E /* LoginViewController.swift */; };
+		73D784E71B90136C005E6E0E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D784E61B90136C005E6E0E /* HomeViewController.swift */; };
+		73E3FFFA1B8FD0660085A566 /* CreateEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E3FFF91B8FD0660085A566 /* CreateEventViewController.swift */; };
+		73E3FFFC1B8FD1CA0085A566 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E3FFFB1B8FD1CA0085A566 /* TextView.swift */; };
+		73E3FFFE1B8FDE470085A566 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E3FFFD1B8FDE470085A566 /* EventDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +41,7 @@
 		739BCB4D1B8F95CE00AFED00 /* Tenderloin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tenderloin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		739BCB511B8F95CE00AFED00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		739BCB521B8F95CE00AFED00 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		739BCB541B8F95CE00AFED00 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		739BCB541B8F95CE00AFED00 /* EventListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewController.swift; sourceTree = "<group>"; };
 		739BCB571B8F95CE00AFED00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		739BCB591B8F95CE00AFED00 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		739BCB5C1B8F95CE00AFED00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -46,6 +51,11 @@
 		739BCB721B8F966700AFED00 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		739BCB751B8FA28000AFED00 /* SeatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeatingView.swift; sourceTree = "<group>"; };
 		739BCB781B8FA46300AFED00 /* RoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
+		73D784E41B8FF7E6005E6E0E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		73D784E61B90136C005E6E0E /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		73E3FFF91B8FD0660085A566 /* CreateEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateEventViewController.swift; sourceTree = "<group>"; };
+		73E3FFFB1B8FD1CA0085A566 /* TextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		73E3FFFD1B8FDE470085A566 /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +110,11 @@
 			isa = PBXGroup;
 			children = (
 				739BCB521B8F95CE00AFED00 /* AppDelegate.swift */,
-				739BCB541B8F95CE00AFED00 /* ViewController.swift */,
+				73D784E61B90136C005E6E0E /* HomeViewController.swift */,
+				739BCB541B8F95CE00AFED00 /* EventListViewController.swift */,
+				73D784E41B8FF7E6005E6E0E /* LoginViewController.swift */,
+				73E3FFF91B8FD0660085A566 /* CreateEventViewController.swift */,
+				73E3FFFD1B8FDE470085A566 /* EventDetailViewController.swift */,
 				739BCB561B8F95CE00AFED00 /* Main.storyboard */,
 				739BCB591B8F95CE00AFED00 /* Images.xcassets */,
 				739BCB5B1B8F95CE00AFED00 /* LaunchScreen.xib */,
@@ -149,6 +163,7 @@
 			children = (
 				739BCB751B8FA28000AFED00 /* SeatingView.swift */,
 				739BCB781B8FA46300AFED00 /* RoundView.swift */,
+				73E3FFFB1B8FD1CA0085A566 /* TextView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -312,11 +327,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				739BCB551B8F95CE00AFED00 /* ViewController.swift in Sources */,
+				73D784E51B8FF7E6005E6E0E /* LoginViewController.swift in Sources */,
+				739BCB551B8F95CE00AFED00 /* EventListViewController.swift in Sources */,
 				739BCB731B8F966700AFED00 /* Event.swift in Sources */,
 				739BCB761B8FA28000AFED00 /* SeatingView.swift in Sources */,
+				73E3FFFC1B8FD1CA0085A566 /* TextView.swift in Sources */,
+				73D784E71B90136C005E6E0E /* HomeViewController.swift in Sources */,
 				739BCB531B8F95CE00AFED00 /* AppDelegate.swift in Sources */,
 				739BCB791B8FA46300AFED00 /* RoundView.swift in Sources */,
+				73E3FFFE1B8FDE470085A566 /* EventDetailViewController.swift in Sources */,
+				73E3FFFA1B8FD0660085A566 /* CreateEventViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
