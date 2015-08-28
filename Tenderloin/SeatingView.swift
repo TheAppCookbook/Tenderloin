@@ -11,8 +11,8 @@ import UIKit
 @objc protocol SeatingViewDataSource: NSObjectProtocol {
     func seatingViewNumberOfSeats(seatingView: SeatingView) -> Int
     func seatingView(seatingView: SeatingView, colorForSeatAtIndex seatIndex: Int) -> UIColor
-    
-    optional func seatingViewAngleOffset(seatingView: SeatingView) -> CGFloat
+    func seatingView(seatingView: SeatingView, imageForSeatAtIndex seatIndex: Int) -> UIImage
+
     optional func seatingView(seatingView: SeatingView, seatIsPushedInAtIndex index: Int) -> Bool
 }
 
@@ -22,7 +22,7 @@ import UIKit
 
 @IBDesignable class SeatingView: UIView {
     // MARK: Types
-    private class SeatView: RoundView {
+    private class SeatView: UIImageView {
         // MARK: Properties
         var touchHandler: (SeatView) -> Void = { (_: SeatView) in }
         
@@ -46,9 +46,9 @@ import UIKit
         // Setup
         self.setTranslatesAutoresizingMaskIntoConstraints(false)
 
-        self.centerTableView.backgroundColor = UIColor.clearColor()
+        self.centerTableView.backgroundColor = self.backgroundColor
         self.centerTableView.borderColor = self.tintColor
-        self.centerTableView.borderWidth = 4.0
+        self.centerTableView.borderWidth = 1.0
         
         self.centerTableView.setTranslatesAutoresizingMaskIntoConstraints(false)
         self.addSubview(self.centerTableView)
@@ -75,7 +75,9 @@ import UIKit
     
     private func layoutSeatViews() {
         for (index, seatView) in enumerate(self.seatViews) {
-            seatView.backgroundColor = self.dataSource?.seatingView(self, colorForSeatAtIndex: index)
+            seatView.image = self.dataSource?.seatingView(self, imageForSeatAtIndex: index)
+            seatView.tintColor = self.dataSource?.seatingView(self, colorForSeatAtIndex: index)
+            
             seatView.setTranslatesAutoresizingMaskIntoConstraints(false)
             
             seatView.touchHandler = { [unowned self] (_: SeatView) in
@@ -128,12 +130,6 @@ import UIKit
         let seatsCount = CGFloat(self.seatViews.count)
         let seatsSize = CGFloat(min(0.25, 1.0 / seatsCount))
         
-        let seatsAngleOffset = self.dataSource?.seatingViewAngleOffset?(self) ?? 0.0
-        var seatsAngle = CGFloat((180.0 * (seatsCount - 2)) / seatsCount)
-        if seatsAngle == 0 {
-            seatsAngle = 90.0
-        }
-        
         for (index, seatView) in enumerate(self.seatViews) {
             seatView.removeConstraints(seatView.constraints())
             
@@ -162,6 +158,7 @@ import UIKit
             
             let x = radius * cos(2.0 * CGFloat(M_PI) * CGFloat(index) / seatsCount)
             let y = radius * sin(2.0 * CGFloat(M_PI) * CGFloat(index) / seatsCount)
+            seatView.transform = CGAffineTransformMakeRotation((2.0 * CGFloat(M_PI) * CGFloat(index) / seatsCount) + CGFloat(M_PI_2))
 
             self.addConstraint(NSLayoutConstraint(item: seatView,
                 attribute: .CenterX,

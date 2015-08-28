@@ -34,6 +34,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.locationManager?.requestWhenInUseAuthorization()
         
+        // Setup Appearance
+        application.statusBarStyle = .LightContent
+        
+        UINavigationBar.appearance().titleTextAttributes = [
+            NSFontAttributeName: UIFont(name: "Raleway-Medium", size: 18.0)!,
+            NSForegroundColorAttributeName: UIColor(red: 0.93, green: 0.75, blue: 0.45, alpha: 1.00)
+        ]
+        
+        UIBarButtonItem.appearance().setTitleTextAttributes([
+            NSFontAttributeName: UIFont(name: "Raleway-Medium", size: 16.0)!
+        ], forState: .Normal)
+        
         return true
     }
 }

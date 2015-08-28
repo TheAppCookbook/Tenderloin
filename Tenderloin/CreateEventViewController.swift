@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class CreateEventViewController: UIViewController {
     // MARK: Properties
@@ -65,7 +66,6 @@ class CreateEventViewController: UIViewController {
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "M/d"
         dateFormatter.lenient = true
-        dateFormatter.doesRelativeDateFormatting = true
         let date = dateFormatter.dateFromString(self.dateTextField.text)!
         
         let event = Event()
@@ -74,6 +74,7 @@ class CreateEventViewController: UIViewController {
         event.date = date
         event.price = price
         event.numberOfSeats = seatCount
+        event.authorEmail = PFUser.currentUser()!.username!
         
         event.save()
         self.navigationController?.popToRootViewControllerAnimated(true)
@@ -86,6 +87,10 @@ extension CreateEventViewController: SeatingViewDataSource {
     }
     
     func seatingView(seatingView: SeatingView, colorForSeatAtIndex seatIndex: Int) -> UIColor {
-        return UIColor.blueColor()
+        return self.navigationController!.navigationBar.titleTextAttributes![NSForegroundColorAttributeName] as! UIColor
+    }
+    
+    func seatingView(seatingView: SeatingView, imageForSeatAtIndex seatIndex: Int) -> UIImage {
+        return UIImage(named: "chair")!
     }
 }

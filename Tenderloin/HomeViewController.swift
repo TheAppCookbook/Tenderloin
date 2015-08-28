@@ -8,6 +8,7 @@
 
 import UIKit
 import GradientView
+import ACBInfoPanel
 
 class HomeViewController: UIViewController {
     // MARK: Properties
@@ -15,6 +16,7 @@ class HomeViewController: UIViewController {
     
     // MARK: Lifecycle
     override func viewDidLoad() {
+        self.navigationController!.navigationBar.shadowImage = UIImage()
         self.gradientView.colors = [
             UIColor(white: 0.0, alpha: 0.0),
             self.navigationController!.navigationBar.barTintColor!
@@ -37,5 +39,15 @@ class HomeViewController: UIViewController {
                 break
             }
         }
+    }
+    
+    // MARK: Responders
+    @IBAction func aboutButtonWasPressed(sender: UIBarButtonItem!) {
+        let infoPanel = ACBInfoPanelViewController()
+        infoPanel.ingredient = "Food Expiration"
+        
+        self.presentViewController(infoPanel,
+            animated: true,
+            completion: nil)
     }
 }

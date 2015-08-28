@@ -11,6 +11,7 @@ import CoreLocation
 
 class Event: PFObject, PFSubclassing {
     // MARK: Properties
+    @NSManaged var authorEmail: String
     @NSManaged var date: NSDate
     @NSManaged var eventDescription: String
     @NSManaged var address: String

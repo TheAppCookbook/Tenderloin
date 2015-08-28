@@ -20,6 +20,7 @@ class EventDetailViewController: UIViewController {
     @IBOutlet var seatingCountLabel: UILabel!
     @IBOutlet var seatingView: SeatingView!
     @IBOutlet var priceLabel: UILabel!
+    @IBOutlet var contactButton: UIButton!
     
     private var takenSeats: [Int: String] = [:] /* Index: Object ID */
     
@@ -49,6 +50,40 @@ class EventDetailViewController: UIViewController {
         for (index, user) in enumerate(self.event!.attendees) {
             self.takenSeats[index] = user.objectId
         }
+        
+        if self.event!.authorEmail == PFUser.currentUser()!.username! {
+            self.contactButton.setTitle("Delete", forState: .Normal)
+        }
+    }
+    
+    // MARK: Responders
+    @IBAction func contactButtonWasPressed(sender: UIButton!) {
+        // User is contact
+        if self.event!.authorEmail == PFUser.currentUser()!.username! {
+            let confirmationAlert = UIAlertController(title: "Are you sure?",
+                message: "You'll have to host the event again, if you change your mind.",
+                preferredStyle: .Alert)
+            confirmationAlert.view.tintColor = self.view.backgroundColor
+            
+            confirmationAlert.addAction(UIAlertAction(title: "Cancel",
+                style: .Cancel,
+                handler: nil))
+            confirmationAlert.addAction(UIAlertAction(title: "Delete", style: .Default) { (_: UIAlertAction!) in
+                self.event!.deleteInBackgroundWithBlock(nil)
+                self.navigationController?.popToRootViewControllerAnimated(true)
+            })
+            
+            self.presentViewController(confirmationAlert,
+                animated: true,
+                completion: nil)
+        }
+        
+        // Otherwise...
+        let subject = NSString(string: "Tenderloin: \(self.dateLabel.text)").stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
+        let body = NSString(string: "Put me down for 1. Pay at the door?").stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
+        
+        let mailURL = NSURL(string: "mailto://\(self.event!.authorEmail)?subject=\(subject)&body=\(body)")!
+        UIApplication.sharedApplication().openURL(mailURL)
     }
 }
 
@@ -58,26 +93,18 @@ extension EventDetailViewController: SeatingViewDataSource {
     }
     
     func seatingView(seatingView: SeatingView, colorForSeatAtIndex seatIndex: Int) -> UIColor {
-        return UIColor.blueColor()
+        if self.takenSeats[seatIndex] == nil {
+            return self.navigationController!.navigationBar.titleTextAttributes![NSForegroundColorAttributeName] as! UIColor
+        }
+        
+        return UIColor.whiteColor()
     }
     
     func seatingView(seatingView: SeatingView, seatIsPushedInAtIndex index: Int) -> Bool {
         return self.takenSeats[index] != nil
     }
-}
-
-extension EventDetailViewController: SeatingViewDelegate {
-    func seatingView(seatingView: SeatingView, seatWasTappedAtIndex index: Int) {
-        if let attendee = self.takenSeats[index] {
-            if attendee == PFUser.currentUser()?.objectId {
-                self.takenSeats.removeValueForKey(index)
-            }
-        } else {
-            self.event!.attendees.append(PFUser.currentUser()!)
-            self.takenSeats[index] = PFUser.currentUser()!.objectId
-        }
-        
-        self.event!.saveInBackgroundWithBlock(nil)
-        self.seatingView.reloadData()
+    
+    func seatingView(seatingView: SeatingView, imageForSeatAtIndex seatIndex: Int) -> UIImage {
+        return UIImage(named: "chair")!
     }
 }

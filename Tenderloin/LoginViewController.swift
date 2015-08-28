@@ -8,11 +8,23 @@
 
 import UIKit
 import Parse
+import GradientView
 
 class LoginViewController: UIViewController {
     // MARK: Properties
+    @IBOutlet var gradientView: GradientView!
+    
     @IBOutlet var usernameField: UITextField!
     @IBOutlet var passwordField: UITextField!
+    
+    // MARK: Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.gradientView.colors = [
+            UIColor.clearColor(),
+            self.view.backgroundColor!
+        ]
+    }
     
     // MARK: Responders
     @IBAction func signInButtonWasPressed(sender: UIButton!) {
