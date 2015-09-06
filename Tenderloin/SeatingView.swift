@@ -40,7 +40,7 @@ import UIKit
     private var seatViews: [SeatView] = []
     
     // MARK: Initiailizers
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
         // Setup

@@ -56,12 +56,10 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Pods/Bolts.framework'
   install_framework 'Pods/GradientView.framework'
   install_framework 'Pods/Parse.framework'
-  install_framework 'Pods/Spring.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Pods/ACBInfoPanel.framework'
   install_framework 'Pods/Bolts.framework'
   install_framework 'Pods/GradientView.framework'
   install_framework 'Pods/Parse.framework'
-  install_framework 'Pods/Spring.framework'
 fi

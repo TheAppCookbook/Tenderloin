@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="U7f-lp-oRz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="U7f-lp-oRz">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -100,6 +101,13 @@
                                     <action selector="textFieldDidExit:" destination="n7Q-Ka-4a6" eventType="editingDidEndOnExit" id="F6O-rL-0bQ"/>
                                 </connections>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="knife_logo" translatesAutoresizingMaskIntoConstraints="NO" id="fHP-J7-TIn">
+                                <rect key="frame" x="263" y="54" width="75" height="81"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="3is-k5-Zqz"/>
+                                    <constraint firstAttribute="height" constant="81" id="zQb-10-bk5"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RMG-ip-ag9">
                                 <rect key="frame" x="41" y="480" width="519" height="60"/>
                                 <color key="backgroundColor" red="0.92941176469999998" green="0.74901960779999999" blue="0.45098039220000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -120,36 +128,30 @@
                                     <action selector="signInButtonWasPressed:" destination="8Mn-kd-Fom" eventType="touchUpInside" id="bsY-8L-xoe"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="knife_logo" translatesAutoresizingMaskIntoConstraints="NO" id="fHP-J7-TIn">
-                                <rect key="frame" x="263" y="54" width="75" height="81"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="75" id="3is-k5-Zqz"/>
-                                    <constraint firstAttribute="height" constant="81" id="zQb-10-bk5"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.18039215689999999" green="0.18039215689999999" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="h7D-TT-Fe4" firstAttribute="leading" secondItem="XVl-Wq-wjP" secondAttribute="leadingMargin" constant="-16" id="3eF-pR-eoP"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="2vp-Pf-xph" secondAttribute="trailing" constant="24" id="7zm-P1-p4b"/>
+                            <constraint firstItem="h7D-TT-Fe4" firstAttribute="leading" secondItem="XVl-Wq-wjP" secondAttribute="leadingMargin" constant="-20" id="3eF-pR-eoP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2vp-Pf-xph" secondAttribute="trailing" constant="20" id="7zm-P1-p4b"/>
                             <constraint firstItem="h7D-TT-Fe4" firstAttribute="top" secondItem="XVl-Wq-wjP" secondAttribute="topMargin" id="93o-vv-bmT"/>
-                            <constraint firstItem="2vp-Pf-xph" firstAttribute="leading" secondItem="XVl-Wq-wjP" secondAttribute="leadingMargin" constant="25" id="Ar6-In-fZs"/>
-                            <constraint firstItem="ryC-en-v3L" firstAttribute="height" secondItem="h7D-TT-Fe4" secondAttribute="height" id="HZv-vp-2BA"/>
+                            <constraint firstItem="2vp-Pf-xph" firstAttribute="leading" secondItem="XVl-Wq-wjP" secondAttribute="leadingMargin" constant="21" id="Ar6-In-fZs"/>
+                            <constraint firstItem="ryC-en-v3L" firstAttribute="height" secondItem="h7D-TT-Fe4" secondAttribute="height" constant="-440" id="HZv-vp-2BA"/>
                             <constraint firstItem="2vp-Pf-xph" firstAttribute="top" secondItem="07m-a2-eNV" secondAttribute="bottom" constant="1" id="IWw-9f-kUb"/>
                             <constraint firstAttribute="centerX" secondItem="fHP-J7-TIn" secondAttribute="centerX" constant="-0.5" id="JxS-aA-bU8"/>
                             <constraint firstItem="2vp-Pf-xph" firstAttribute="top" secondItem="07m-a2-eNV" secondAttribute="bottom" constant="1" id="LkN-yG-PWT"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="RMG-ip-ag9" secondAttribute="trailing" constant="24" id="ONR-Sd-YH9"/>
+                            <constraint firstItem="Rv3-vw-qHf" firstAttribute="top" relation="greaterThanOrEqual" secondItem="RMG-ip-ag9" secondAttribute="bottom" constant="20" id="LmJ-Y7-7lk" customClass="KeyboardLayoutConstraint" customModule="Tenderloin" customModuleProvider="target"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RMG-ip-ag9" secondAttribute="trailing" constant="20" id="ONR-Sd-YH9"/>
                             <constraint firstItem="ryC-en-v3L" firstAttribute="width" secondItem="h7D-TT-Fe4" secondAttribute="width" id="PNM-Jh-nY2"/>
                             <constraint firstItem="fHP-J7-TIn" firstAttribute="centerX" secondItem="9iF-oM-aUr" secondAttribute="centerX" id="Slv-Q4-TkF"/>
                             <constraint firstItem="fHP-J7-TIn" firstAttribute="top" secondItem="IKu-fE-Iim" secondAttribute="bottom" constant="34" id="T1R-CD-zCP"/>
-                            <constraint firstItem="ryC-en-v3L" firstAttribute="centerY" secondItem="h7D-TT-Fe4" secondAttribute="centerY" id="Ufz-GZ-uNL"/>
+                            <constraint firstItem="ryC-en-v3L" firstAttribute="centerY" secondItem="h7D-TT-Fe4" secondAttribute="centerY" constant="-220" id="Ufz-GZ-uNL"/>
                             <constraint firstItem="ryC-en-v3L" firstAttribute="centerX" secondItem="h7D-TT-Fe4" secondAttribute="centerX" id="VxR-bo-A1S"/>
-                            <constraint firstItem="07m-a2-eNV" firstAttribute="leading" secondItem="XVl-Wq-wjP" secondAttribute="leadingMargin" constant="25" id="cAk-h9-hug"/>
+                            <constraint firstItem="07m-a2-eNV" firstAttribute="leading" secondItem="XVl-Wq-wjP" secondAttribute="leadingMargin" constant="21" id="cAk-h9-hug"/>
                             <constraint firstItem="9iF-oM-aUr" firstAttribute="top" secondItem="fHP-J7-TIn" secondAttribute="bottom" constant="8" id="fM9-KR-wsN"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="h7D-TT-Fe4" secondAttribute="trailing" constant="-16" id="q8j-p8-Gyu"/>
-                            <constraint firstItem="RMG-ip-ag9" firstAttribute="leading" secondItem="XVl-Wq-wjP" secondAttribute="leadingMargin" constant="25" id="qkc-AH-TKA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="h7D-TT-Fe4" secondAttribute="trailing" constant="-20" id="q8j-p8-Gyu"/>
+                            <constraint firstItem="RMG-ip-ag9" firstAttribute="leading" secondItem="XVl-Wq-wjP" secondAttribute="leadingMargin" constant="21" id="qkc-AH-TKA"/>
                             <constraint firstItem="07m-a2-eNV" firstAttribute="top" secondItem="9iF-oM-aUr" secondAttribute="bottom" constant="24" id="s0q-oq-RyS"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="07m-a2-eNV" secondAttribute="trailing" constant="24" id="uVP-Cg-bV7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="07m-a2-eNV" secondAttribute="trailing" constant="20" id="uVP-Cg-bV7"/>
                             <constraint firstAttribute="centerX" secondItem="07m-a2-eNV" secondAttribute="centerX" constant="-14.5" id="vK6-lg-VyY"/>
                             <constraint firstItem="RMG-ip-ag9" firstAttribute="top" secondItem="2vp-Pf-xph" secondAttribute="bottom" constant="28" id="zPj-0f-Idg"/>
                         </constraints>
@@ -185,7 +187,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="EventCell" id="cR4-jZ-gSD">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <rect key="frame" x="10" y="10" width="170" height="225"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="170" height="225"/>
@@ -247,7 +249,7 @@
             </objects>
             <point key="canvasLocation" x="363" y="924"/>
         </scene>
-        <!--Host Event-->
+        <!--Data Source-->
         <scene sceneID="OKG-22-vop">
             <objects>
                 <viewController title="Host Event" id="n7Q-Ka-4a6" customClass="CreateEventViewController" customModule="Tenderloin" customModuleProvider="target" sceneMemberID="viewController">
@@ -256,7 +258,7 @@
                         <viewControllerLayoutGuide type="bottom" id="16y-X8-K1N"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kpz-kU-ssx">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8bl-B9-CmC">
@@ -464,7 +466,7 @@
             </objects>
             <point key="canvasLocation" x="1136" y="116"/>
         </scene>
-        <!--EVENT-->
+        <!--Data Source-->
         <scene sceneID="DFo-Yv-fsS">
             <objects>
                 <viewController title="EVENT" id="lnZ-59-M69" customClass="EventDetailViewController" customModule="Tenderloin" customModuleProvider="target" sceneMemberID="viewController">
@@ -473,7 +475,7 @@
                         <viewControllerLayoutGuide type="bottom" id="eBU-ge-qep"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="PGB-8g-zmj">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rbG-7G-dzF">
@@ -646,7 +648,7 @@
                         <viewControllerLayoutGuide type="bottom" id="RVN-82-MBe"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Trf-jt-jhO">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="GcM-Ui-Smq">
@@ -679,19 +681,19 @@
                         </subviews>
                         <color key="backgroundColor" red="0.18039215689999999" green="0.18039215689999999" blue="0.18039215689999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="kdB-wz-W8B" secondAttribute="trailing" constant="-16" id="1gm-Ua-WPX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kdB-wz-W8B" secondAttribute="trailing" constant="-20" id="1gm-Ua-WPX"/>
                             <constraint firstItem="RVN-82-MBe" firstAttribute="top" secondItem="kdB-wz-W8B" secondAttribute="bottom" id="2vx-KA-hj4"/>
                             <constraint firstAttribute="centerX" secondItem="XV0-vD-8Uj" secondAttribute="centerX" id="DTC-8A-ohR"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="GcM-Ui-Smq" secondAttribute="trailing" constant="-16" id="EgG-dU-lSe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GcM-Ui-Smq" secondAttribute="trailing" constant="-20" id="EgG-dU-lSe"/>
                             <constraint firstItem="kdB-wz-W8B" firstAttribute="top" secondItem="hrz-SZ-K6T" secondAttribute="bottom" constant="8" id="HnG-ye-uym"/>
                             <constraint firstAttribute="centerX" secondItem="hrz-SZ-K6T" secondAttribute="centerX" id="Q1Z-oo-i1Y"/>
                             <constraint firstItem="GcM-Ui-Smq" firstAttribute="top" secondItem="waf-4t-evz" secondAttribute="bottom" id="WCK-Y0-s1V"/>
                             <constraint firstItem="GcM-Ui-Smq" firstAttribute="height" secondItem="XV0-vD-8Uj" secondAttribute="height" id="Y67-TB-gJw"/>
                             <constraint firstItem="XV0-vD-8Uj" firstAttribute="top" secondItem="waf-4t-evz" secondAttribute="bottom" id="bqf-2D-bez"/>
-                            <constraint firstItem="GcM-Ui-Smq" firstAttribute="leading" secondItem="Trf-jt-jhO" secondAttribute="leadingMargin" constant="-16" id="cUz-bC-Yvh"/>
+                            <constraint firstItem="GcM-Ui-Smq" firstAttribute="leading" secondItem="Trf-jt-jhO" secondAttribute="leadingMargin" constant="-20" id="cUz-bC-Yvh"/>
                             <constraint firstItem="hrz-SZ-K6T" firstAttribute="top" secondItem="waf-4t-evz" secondAttribute="bottom" constant="8" id="dNw-BQ-IBw"/>
                             <constraint firstItem="GcM-Ui-Smq" firstAttribute="width" secondItem="XV0-vD-8Uj" secondAttribute="width" id="o3z-Lr-f0l"/>
-                            <constraint firstItem="kdB-wz-W8B" firstAttribute="leading" secondItem="Trf-jt-jhO" secondAttribute="leadingMargin" constant="-16" id="oQi-oU-rGV"/>
+                            <constraint firstItem="kdB-wz-W8B" firstAttribute="leading" secondItem="Trf-jt-jhO" secondAttribute="leadingMargin" constant="-20" id="oQi-oU-rGV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="TENDERLOIN" id="gn9-JM-Wb0">

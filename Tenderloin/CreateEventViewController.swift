@@ -58,15 +58,15 @@ class CreateEventViewController: UIViewController {
     }
     
     @IBAction func postButtonWasPressed(sender: UIBarButtonItem!) {
-        let description = self.descriptionTextField.text
-        let address = self.addressTextField.text
+        let description = self.descriptionTextField.text!
+        let address = self.addressTextField.text!
         let price = (self.priceTextField.text as NSString!).integerValue
         let seatCount = (self.seatCountTextField.text as NSString!).integerValue
         
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "M/d"
         dateFormatter.lenient = true
-        let date = dateFormatter.dateFromString(self.dateTextField.text)!
+        let date = dateFormatter.dateFromString(self.dateTextField.text!)!
         
         let event = Event()
         event.eventDescription = description

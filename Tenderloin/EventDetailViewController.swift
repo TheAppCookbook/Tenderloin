@@ -37,7 +37,7 @@ class EventDetailViewController: UIViewController {
         
         self.event!.placemark { (placemark: CLPlacemark?) in
             if let currentLocation = AppDelegate.sharedAppDelegate?.locationManager?.location {
-                let distance = currentLocation.distanceFromLocation(placemark!.location) / 1609.344
+                let distance = currentLocation.distanceFromLocation(placemark!.location!) / 1609.344
                 self.locationLabel.text = "\(placemark!.subLocality) - \(distance)mi"
             } else {
                 self.locationLabel.text = placemark!.subLocality

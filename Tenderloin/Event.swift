@@ -24,8 +24,8 @@ class Event: PFObject, PFSubclassing {
     }
     
     func placemark(completion: (CLPlacemark?) -> Void) {
-        CLGeocoder().geocodeAddressString(self.address) { (placemarks: [AnyObject]!, error: NSError!) in
-            completion(placemarks.first as? CLPlacemark)
+        CLGeocoder().geocodeAddressString(self.address) { (placemarks: [CLPlacemark]?, error: NSError?) in
+            completion(placemarks?.first)
         }
     }
 }

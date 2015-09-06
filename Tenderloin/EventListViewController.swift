@@ -29,7 +29,7 @@ class EventListViewController: UICollectionViewController {
     }
 }
 
-extension EventListViewController: UICollectionViewDataSource {
+extension EventListViewController { // UICollectionViewDataSource
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.events.count
     }
@@ -54,7 +54,7 @@ extension EventListViewController: UICollectionViewDataSource {
     }
 }
 
-extension EventListViewController: UICollectionViewDelegate {
+extension EventListViewController { // UICollectionViewDelegate
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let event = self.events[indexPath.row]
         self.homeViewController?.performSegueWithIdentifier("PushDetail",
