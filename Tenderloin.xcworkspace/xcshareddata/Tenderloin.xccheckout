@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4A8EBAE9-E010-4A84-9DD6-C75C96680534</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Tenderloin</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CCF254B26F21729E7D2FB6DD8BADDE548D1C0BD2</key>
+		<string>github.com:TheAppCookbook/Tenderloin.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Tenderloin.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CCF254B26F21729E7D2FB6DD8BADDE548D1C0BD2</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:TheAppCookbook/Tenderloin.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CCF254B26F21729E7D2FB6DD8BADDE548D1C0BD2</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CCF254B26F21729E7D2FB6DD8BADDE548D1C0BD2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Tenderloin</string>
+		</dict>
+	</array>
+</dict>
+</plist>

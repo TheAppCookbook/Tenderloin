@@ -47,7 +47,7 @@ class EventDetailViewController: UIViewController {
         self.seatingCountLabel.text = "\(self.event!.numberOfSeats)"
         self.seatingView.reloadData()
         
-        for (index, user) in enumerate(self.event!.attendees) {
+        for (index, user) in self.event!.attendees.enumerate() {
             self.takenSeats[index] = user.objectId
         }
         

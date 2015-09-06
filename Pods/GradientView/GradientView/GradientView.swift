@@ -204,7 +204,7 @@ public class GradientView: UIView {
 				let cgColorSpace = CGColorGetColorSpace(cgColor)
 
 				// The color's color space is RGB, simply add it.
-				if CGColorSpaceGetModel(cgColorSpace).value == colorSpaceModel.value {
+				if CGColorSpaceGetModel(cgColorSpace).rawValue == colorSpaceModel.rawValue {
 					return cgColor as AnyObject!
 				}
 

@@ -710,6 +710,7 @@
                     <connections>
                         <outlet property="gradientView" destination="XV0-vD-8Uj" id="31p-Lo-uAg"/>
                         <segue destination="lnZ-59-M69" kind="show" identifier="PushDetail" id="cil-W2-dep"/>
+                        <segue destination="8Mn-kd-Fom" kind="presentation" identifier="PresentLogin" id="GYC-yA-TEA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nvS-xu-t2w" userLabel="First Responder" sceneMemberID="firstResponder"/>

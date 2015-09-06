@@ -27,7 +27,7 @@ import UIKit
         var touchHandler: (SeatView) -> Void = { (_: SeatView) in }
         
         // MARK: Responders
-        private override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent) {
+        private override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
             self.touchHandler(self)
         }
     }
@@ -44,13 +44,13 @@ import UIKit
         super.init(coder: aDecoder)
         
         // Setup
-        self.setTranslatesAutoresizingMaskIntoConstraints(false)
+        self.translatesAutoresizingMaskIntoConstraints = false
 
         self.centerTableView.backgroundColor = self.backgroundColor
         self.centerTableView.borderColor = self.tintColor
         self.centerTableView.borderWidth = 1.0
         
-        self.centerTableView.setTranslatesAutoresizingMaskIntoConstraints(false)
+        self.centerTableView.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(self.centerTableView)
     }
     
@@ -74,11 +74,11 @@ import UIKit
     }
     
     private func layoutSeatViews() {
-        for (index, seatView) in enumerate(self.seatViews) {
+        for (index, seatView) in self.seatViews.enumerate() {
             seatView.image = self.dataSource?.seatingView(self, imageForSeatAtIndex: index)
             seatView.tintColor = self.dataSource?.seatingView(self, colorForSeatAtIndex: index)
             
-            seatView.setTranslatesAutoresizingMaskIntoConstraints(false)
+            seatView.translatesAutoresizingMaskIntoConstraints = false
             
             seatView.touchHandler = { [unowned self] (_: SeatView) in
                 self.delegate?.seatingView?(self,
@@ -91,7 +91,7 @@ import UIKit
     
     // MARK: Layout Handlers
     override func layoutSubviews() {
-        if self.centerTableView.constraints().isEmpty {
+        if self.centerTableView.constraints.isEmpty {
             self.addConstraint(NSLayoutConstraint(item: self.centerTableView,
                 attribute: .Width,
                 relatedBy: .Equal,
@@ -130,8 +130,8 @@ import UIKit
         let seatsCount = CGFloat(self.seatViews.count)
         let seatsSize = CGFloat(min(0.25, 1.0 / seatsCount))
         
-        for (index, seatView) in enumerate(self.seatViews) {
-            seatView.removeConstraints(seatView.constraints())
+        for (index, seatView) in self.seatViews.enumerate() {
+            seatView.removeConstraints(seatView.constraints)
             
             self.addConstraint(NSLayoutConstraint(item: seatView,
                 attribute: .Width,

@@ -9,6 +9,7 @@
 import UIKit
 import GradientView
 import ACBInfoPanel
+import Parse
 
 class HomeViewController: UIViewController {
     // MARK: Properties
@@ -16,11 +17,18 @@ class HomeViewController: UIViewController {
     
     // MARK: Lifecycle
     override func viewDidLoad() {
+        super.viewDidLoad()
+        
         self.navigationController!.navigationBar.shadowImage = UIImage()
         self.gradientView.colors = [
             UIColor(white: 0.0, alpha: 0.0),
             self.navigationController!.navigationBar.barTintColor!
         ]
+        
+        if PFUser.currentUser() == nil {
+            self.performSegueWithIdentifier("PresentLogin",
+                sender: nil)
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

@@ -15,14 +15,6 @@ class EventListViewController: UICollectionViewController {
     weak var homeViewController: HomeViewController?
     
     // MARK: Lifecycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        if PFUser.currentUser() == nil {
-            self.performSegueWithIdentifier("PresentLogin",
-                sender: nil)
-        }
-    }
-    
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         self.reloadData()
@@ -45,7 +37,7 @@ extension EventListViewController: UICollectionViewDataSource {
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let event = self.events[indexPath.row]
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("EventCell",
-            forIndexPath: indexPath) as! UICollectionViewCell
+            forIndexPath: indexPath) as UICollectionViewCell
         
         let dateLabel = cell.viewWithTag(1) as! UILabel
         let dateFormatter = NSDateFormatter()
